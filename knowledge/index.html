@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .title{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title text-pink" style="color: green;">This is Title</h1>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis iure numquam temporibus distinctio quod placeat molestias modi reprehenderit laborum aliquid fuga similique, consectetur vero quis nemo recusandae aliquam doloribus quos!
+    </p>
+    <ul>
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Mango</li>
+    </ul>
+    <a href="https://google.com" target="_blink" mms="ko htet">Google</a>
+    <br>
+    <br>
+    <form action="">
+        <input type="text">
+        <button type="button" class="btn text-pink">Clik me</button>
+    </form>
+    <script>
+
+        let p = document.querySelector("p");
+        document.querySelector("button").addEventListener("click",()=>alert("hello"));
+
+        let me = {
+            name : "Hein Htet Zan",
+            age: 26,
+            teach : ()=> "I can teach"
+        }
+
+        class MySelf {
+            name = "hein Htet zan";
+            age = 26;
+            teach(){
+                return "I can teach";
+            }
+        }
+
+        let myself = new MySelf;
+
+    </script>
+</body>
+</html>

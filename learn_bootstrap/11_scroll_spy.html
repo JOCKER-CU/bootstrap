@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .tast-img{
+            width: 20px;
+        }
+    </style>
+</head>
+<body class="position-relative">
+
+<div aria-live="polite" aria-atomic="true" class="position-relative">
+    <!-- Position it: -->
+    <!-- - `.toast-container` for spacing between toasts -->
+    <!-- - `.position-absolute`, `top-0` & `end-0` to position the toasts in the upper right corner -->
+    <!-- - `.p-3` to prevent the toasts from sticking to the edge of the container  -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+
+        <!-- Then put toasts within -->
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="https://mms-it.com/profile/images/logo.png" class="tast-img rounded me-2" alt="...">
+                <strong class="me-auto">Bootstrap</strong>
+                <small class="text-muted">just now</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Here Is toast One
+            </div>
+        </div>
+
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="https://mms-it.com/profile/images/logo.png" class="tast-img rounded me-2" alt="...">
+                <strong class="me-auto">Bootstrap</strong>
+                <small class="text-muted">2 seconds ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Here is toast two
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="my-5">
+                    <nav id="aa" class="navbar navbar-light bg-light px-3">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#fat">@fat</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#mdo">@mdo</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#one">one</a></li>
+                                    <li><a class="dropdown-item" href="#two">two</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#three">three</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div data-bs-spy="scroll" data-bs-target="#aa" data-bs-offset="0" tabindex="0" class="overflow-scroll" style="height: 200px">
+                        <h4 id="fat">@fat</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eius enim fuga impedit inventore labore, placeat, porro, quisquam repellendus tempore vero voluptate! Excepturi, neque, nisi. Dicta possimus repudiandae temporibus ut.
+                        </p>
+                        <h4 id="mdo">@mdo</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias atque commodi corporis deleniti dolor doloremque harum hic, laudantium magnam minima perferendis porro sit? Culpa eveniet itaque molestias officiis voluptatibus?
+                        </p>
+                        <h4 id="one">one</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus inventore laboriosam magni similique! Accusantium aspernatur eos fuga, obcaecati, odio officiis pariatur possimus quae quo repellendus reprehenderit saepe sed unde voluptatibus?
+                        </p>
+                        <h4 id="two">two</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consectetur debitis deserunt ea id illum modi nostrum odio sed totam? Atque aut dicta est ex odit officia quia sit, velit.
+                        </p>
+                        <h4 id="three">three</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet aperiam architecto, aut cum cumque ex excepturi fuga incidunt iusto nulla, obcaecati qui quo repellendus, soluta vitae voluptatum? Dolorum, et?
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script>
+    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+        target: '#aa'
+    })
+
+    var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+    var toastList = toastElList.map(function (toastEl) {
+        let toast =  new bootstrap.Toast(toastEl, {
+            autohide : true,
+            delay : 20000,
+            animation : true,
+        });
+        toast.show();
+    })
+</script>
+</body>
+</html>

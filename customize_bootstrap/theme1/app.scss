@@ -1,0 +1,21 @@
+$body-bg: #eee;
+$body-color: #111;
+
+$theme-colors: (
+  "primary":    #775ada,
+  "secondary":  #28c7fa,
+//   "success":    $success,
+//   "info":       $info,
+//   "warning":    $warning,
+  "danger":     #ff304f,
+//   "light":      $light,
+//   "dark":       $dark
+);
+
+$input-border-radius : 100px;
+
+$btn-border-radius: 100px;
+
+$font-family-sans-serif: 'Hachi Maru Pop',  cursive,'Padauk', sans-serif;
+
+@import '../node_modules/bootstrap/scss/bootstrap';

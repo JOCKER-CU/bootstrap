@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>5 Easy Components</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <style>
+        .test{
+            background: #d6b1b1 !important;
+            padding: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="row py-5" id="output">
+
+        </div>
+    </div>
+
+    <div class="modal fade" tabindex="-1" data-bs-backdrop="static" id="mb">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mb-title">Poe Mamhi Thar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/poe-landscape-5.jpg"  id='mb-image' class="img-fluid mb-3" alt="">
+                    <p id="mb-des">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam at cupiditate debitis deserunt dignissimos distinctio dolorum enim explicabo facilis maxime nesciunt odio omnis quasi, quia quis sit veniam vitae voluptate!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script>
+
+        let mb = document.getElementById("mb");
+        let aa = new bootstrap.Modal(mb);
+
+        // setTimeout(function () {
+        //     aa.show();
+        // },5000);
+        //
+        // setTimeout(function () {
+        //     aa.hide();
+        // },7000);
+
+        fetch('https://fakestoreapi.com/products/')
+            .then(res=>res.json())
+            .then(json=> {
+                console.log(json);
+                let output = document.getElementById('output');
+                json.map(function (item) {
+                    output.innerHTML += `
+                        <div class="col-12 col-lg-3">
+                            <div class="card mb-3">
+                                <img src="${item.image}" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <p>${item.title}</p>
+                                    <small class="text-black-50">${item.category}</small>
+                                    <br>
+                                    <br>
+                                    <button class="btn btn-primary" onclick="showDetail(${item.id})">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                })
+
+
+
+            })
+
+        function showDetail(id) {
+            fetch('https://fakestoreapi.com/products/'+id)
+                .then(res=>res.json())
+                .then(json=> {
+                    document.getElementById('mb-title').innerHTML = json.title;
+                    document.getElementById('mb-image').src = json.image;
+                    document.getElementById('mb-des').innerHTML = json.description;
+
+                    aa.show();
+
+                })
+
+        }
+
+
+    </script>
+</body>
+</html>

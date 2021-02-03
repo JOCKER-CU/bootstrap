@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pop Up Box</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <style>
+        .test{
+            background: #d6b1b1 !important;
+            padding: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="my-5">
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="right" title="Hein Htet Zan <br> I'm web developer">
+                        Tooltip on top
+                    </button>
+
+                    <i class="fas fa-car fa-3x" data-bs-toggle="tooltip" title="This is car"></i>
+
+                </div>
+                <div class="my-5">
+
+
+                    <button tabindex="0" type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover San Kyi tar" data-bs-content="Here is MMS IT Web design course">Click to toggle popover</button>
+
+                    <a tabindex="0" class="btn btn-lg btn-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Dismissible popover" data-bs-html="true" data-bs-content="And <b>here's some amazing content</b>. It's very engaging. Right?">Dismissible popover</a>
+                </div>
+
+                <div class="my-5">
+                    <div class="accordion" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="ture" aria-controls="flush-collapseOne">
+                                    Accordion Item #1
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    Accordion Item #2
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    Accordion Item #3
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="aa">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bb" aria-expanded="false" aria-controls="bb">
+                                    Accordion Item #4
+                                </button>
+                            </h2>
+                            <div id="bb" class="accordion-collapse collapse" aria-labelledby="aa" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus ter
+                                    ry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard do
+                                    lor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+                                    moon tempor, sunt aliqua put a bird on it squid single-origin coffee
+                                    nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                                    beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                                    excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+                                    aesthetic synth nesciunt you probably haven't heard of them accusamus l
+                                    abore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+
+        var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+            trigger: 'focus'
+        })
+    </script>
+</body>
+</html>
